@@ -1,4 +1,4 @@
-module "example" {
+module "alerts" {
   source      = "../../"
   common_tags = var.common_tags
 }
