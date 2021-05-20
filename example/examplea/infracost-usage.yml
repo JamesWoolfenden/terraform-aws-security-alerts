@@ -1,0 +1,8 @@
+version: 0.1
+resource_usage:
+  module.alerts.aws_sns_topic.trail-unauthorised:
+    monthly_requests: 0
+    request_size_kb: 0
+  module.alerts.aws_sns_topic_subscription.sms:
+    monthly_requests: 0
+    request_size_kb: 0

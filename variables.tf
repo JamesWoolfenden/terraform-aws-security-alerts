@@ -1,4 +1,19 @@
-variable "common_tags" {
-  description = "This is to help you add tags to your cloud objects"
-  type        = map(any)
+
+variable "endpoint" {
+  type = string
+}
+
+variable "protocol" {
+  type    = string
+  default = "sms"
+}
+
+variable "log_group_name" {
+  type    = string
+  default = "cloudtrail"
+}
+
+variable "kms_key" {
+  type    = string
+  default = "alias/aws/sns"
 }

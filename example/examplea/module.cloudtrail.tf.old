@@ -1,6 +1,6 @@
 module "cloudtrail" {
   source      = "JamesWoolfenden/cloudtrail/aws"
-  version     = "0.1.40"
+  version     = "0.1.42"
   common_tags = var.common_tags
   trail = {
     name                          = "tf-trail-account"

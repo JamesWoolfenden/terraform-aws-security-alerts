@@ -1,2 +1,1 @@
-common_tags = {
-"createby" = "Terraform" }
+endpoint = "0123456789"

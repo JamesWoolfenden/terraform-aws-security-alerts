@@ -1,4 +1,4 @@
 module "alerts" {
-  source      = "../../"
-  common_tags = var.common_tags
+  source   = "../../"
+  endpoint = var.endpoint
 }
