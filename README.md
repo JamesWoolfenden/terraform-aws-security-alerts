@@ -9,7 +9,7 @@
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 [![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-security-alerts/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-security-alerts&benchmark=INFRASTRUCTURE+SECURITY)
 
-This module is to help implement compliance with the CIS benchmarks as test in the Bridgecrew checks <https://docs.bridgecrew.io/docs/monitoring-policies>:
+This module is to help implement compliance with the CIS benchmarks as tested in the Bridgecrew checks <https://docs.bridgecrew.io/docs/monitoring-policies>:
 
 - BC_AWS_MONITORING_1
 - BC_AWS_MONITORING_2
