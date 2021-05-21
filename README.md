@@ -9,11 +9,22 @@
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
 [![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-security-alerts/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-security-alerts&benchmark=INFRASTRUCTURE+SECURITY)
 
-This module is to help implement compliance with the CIS benchmarks as test in the Bridgecrew checkd:
+This module is to help implement compliance with the CIS benchmarks as test in the Bridgecrew checks <https://docs.bridgecrew.io/docs/monitoring-policies>:
 
 - BC_AWS_MONITORING_1
 - BC_AWS_MONITORING_2
+- BC_AWS_MONITORING_3
+- BC_AWS_MONITORING_4
+- BC_AWS_MONITORING_5
 - BC_AWS_MONITORING_6
+- BC_AWS_MONITORING_7
+- BC_AWS_MONITORING_8
+- BC_AWS_MONITORING_9
+- BC_AWS_MONITORING_10
+- BC_AWS_MONITORING_11
+- BC_AWS_MONITORING_12
+- BC_AWS_MONITORING_13
+- BC_AWS_MONITORING_14
 
 ---
 
@@ -38,35 +49,61 @@ module "security-alerts" {
 ## Costs
 
 ```text
-Terraform directory at .
-  ✔ Running terraform plan
-  ✔ Running terraform show
-
-✔ Calculating monthly cost estimate
+Calculated monthly cost estimate
 
 Project: .
 
- Name                                                   Monthly Qty  Unit              Monthly Cost
+ Name                                                      Monthly Qty  Unit           Monthly Cost
+
+ module.alerts.aws_cloudwatch_metric_alarm.bucket_mod
+ └─ Standard resolution                                              1  alarm metrics         $0.10
+
+ module.alerts.aws_cloudwatch_metric_alarm.cloudtrail_cfg
+ └─ Standard resolution                                              1  alarm metrics         $0.10
+
+ module.alerts.aws_cloudwatch_metric_alarm.cmk
+ └─ Standard resolution                                              1  alarm metrics         $0.10
+
+ module.alerts.aws_cloudwatch_metric_alarm.config_change
+ └─ Standard resolution                                              1  alarm metrics         $0.10
+
+ module.alerts.aws_cloudwatch_metric_alarm.gateway
+ └─ Standard resolution                                              1  alarm metrics         $0.10
+
+ module.alerts.aws_cloudwatch_metric_alarm.nacl
+ └─ Standard resolution                                              1  alarm metrics         $0.10
 
  module.alerts.aws_cloudwatch_metric_alarm.nomfa
- └─ Standard resolution                                           1  alarm metrics            $0.10
+ └─ Standard resolution                                              1  alarm metrics         $0.10
+
+ module.alerts.aws_cloudwatch_metric_alarm.policychange
+ └─ Standard resolution                                              1  alarm metrics         $0.10
+
+ module.alerts.aws_cloudwatch_metric_alarm.root
+ └─ Standard resolution                                              1  alarm metrics         $0.10
+
+ module.alerts.aws_cloudwatch_metric_alarm.routes
+ └─ Standard resolution                                              1  alarm metrics         $0.10
+
+ module.alerts.aws_cloudwatch_metric_alarm.sg
+ └─ Standard resolution                                              1  alarm metrics         $0.10
 
  module.alerts.aws_cloudwatch_metric_alarm.signfail
- └─ Standard resolution                                           1  alarm metrics            $0.10
+ └─ Standard resolution                                              1  alarm metrics         $0.10
 
  module.alerts.aws_cloudwatch_metric_alarm.unauth
- └─ Standard resolution                                           1  alarm metrics            $0.10
+ └─ Standard resolution                                              1  alarm metrics         $0.10
+
+ module.alerts.aws_cloudwatch_metric_alarm.vpc
+ └─ Standard resolution                                              1  alarm metrics         $0.10
 
  module.alerts.aws_sns_topic.trail-unauthorised
- └─ Requests                                         Cost depends on usage: $0.50 per 1M requests
+ └─ Requests                                                         0  1M requests           $0.00
 
- PROJECT TOTAL                                                                                $0.30
+ PROJECT TOTAL                                                                                $1.40
 
 ----------------------------------
-To estimate usage-based resources use --usage-file, see https://infracost.io/usage-file
-
 1 resource type wasn't estimated as it's not supported yet.
-Please watch/star https://github.com/infracost/infracost as new resources are added regularly.
 1 x aws_sns_topic_subscription
 ```
 
@@ -89,12 +126,34 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [aws_cloudwatch_log_metric_filter.bucket_mod](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.cloudtrail_cfg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.cmk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.config_change](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.nacl](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
 | [aws_cloudwatch_log_metric_filter.nomfa](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.policychange](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.root](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.routes](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.sg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
 | [aws_cloudwatch_log_metric_filter.signfail](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
 | [aws_cloudwatch_log_metric_filter.unauth](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_metric_alarm.bucket_mod](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.cloudtrail_cfg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.cmk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.config_change](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.nacl](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
 | [aws_cloudwatch_metric_alarm.nomfa](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.policychange](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.root](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.routes](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.sg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
 | [aws_cloudwatch_metric_alarm.signfail](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
 | [aws_cloudwatch_metric_alarm.unauth](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
 | [aws_sns_topic.trail-unauthorised](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic) | resource |
 | [aws_sns_topic_subscription.sms](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic_subscription) | resource |
 
@@ -129,7 +188,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2021 James Woolfenden
+Copyright © 2021 James Woolfenden
 
 ## License
 
