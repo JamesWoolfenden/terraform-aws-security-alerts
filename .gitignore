@@ -30,4 +30,3 @@ secrets.auto.tfvars
 checksums.txt
 *.tar.gz
 original/
-plan.out
