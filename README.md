@@ -33,6 +33,7 @@ This module is 100% Open Source and licensed under the [APACHE2](LICENSE).
 ## Introduction
 
 This module deploys _security-alerts_ for an AWS account.
+TODO: Update to use lambda rather than SNS Email - https://aws.amazon.com/premiumsupport/knowledge-center/change-sns-email-for-cloudwatch-events/
 
 ## Usage
 
