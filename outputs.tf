@@ -35,3 +35,16 @@ output "alarms" {
     aws_cloudwatch_metric_alarm.vpc,
   ]
 }
+
+
+output "lambda" {
+  value = aws_lambda_function.email
+}
+
+output "sns_topic_processed" {
+  value = aws_sns_topic.processed-message
+}
+
+output "sns_topic_subscription_lambda" {
+  value = aws_sns_topic_subscription.lambda
+}
