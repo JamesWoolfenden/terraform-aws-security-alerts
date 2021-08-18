@@ -1,0 +1,7 @@
+import boto3
+import json
+sns_arn = "${snstopic}"
+
+def lambda_handler(event, context):
+    client = boto3.client("sns")
+    resp = client.publish(TargetArn=sns_arn, Message=json.dumps(event), Subject="<CUSTOM_SUBJECT>")
