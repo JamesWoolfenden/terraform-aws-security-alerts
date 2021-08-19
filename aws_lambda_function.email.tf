@@ -7,7 +7,8 @@ resource "aws_lambda_function" "email" {
   runtime                        = "python3.6"
   handler                        = "handler.lambda_handler"
   filename                       = "${path.module}/lambda/lambda.zip"
-  reserved_concurrent_executions = 0
+  source_code_hash               = filebase64sha256("${path.module}/lambda/lambda.zip")
+  reserved_concurrent_executions = var.concurrency
 
   depends_on = [data.archive_file.notify]
   tracing_config {

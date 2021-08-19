@@ -47,6 +47,12 @@ module "security-alerts" {
 }
 ```
 
+## Testing
+
+```bash
+aws cloudwatch set-alarm-state --alarm-name "vpc_changes_alarm" --state-reason "Testing the Amazon Cloudwatch alarm" --state-value ALARM --region eu-west-2
+```
+
 ## Costs
 
 ```text
@@ -118,7 +124,7 @@ No requirements.
 | Name | Version |
 |------|---------|
 | <a name="provider_archive"></a> [archive](#provider\_archive) | n/a |
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.42.0 |
 
 ## Modules
 
@@ -163,6 +169,8 @@ No modules.
 | [aws_iam_role_policy.failure](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
 | [aws_iam_role_policy.lambda](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
 | [aws_iam_role_policy.success](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
+| [aws_kms_alias.alarm](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_alias) | resource |
+| [aws_kms_key.alarm](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) | resource |
 | [aws_lambda_function.email](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function) | resource |
 | [aws_lambda_permission.with_sns](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_permission) | resource |
 | [aws_sns_topic.processed-message](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic) | resource |
@@ -170,13 +178,16 @@ No modules.
 | [aws_sns_topic_subscription.Emailfromlambda](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic_subscription) | resource |
 | [aws_sns_topic_subscription.lambda](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic_subscription) | resource |
 | [archive_file.notify](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file) | data source |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_concurrency"></a> [concurrency](#input\_concurrency) | n/a | `number` | `1` | no |
 | <a name="input_endpoint"></a> [endpoint](#input\_endpoint) | n/a | `string` | n/a | yes |
 | <a name="input_function_name"></a> [function\_name](#input\_function\_name) | n/a | `string` | `"message-processor"` | no |
+| <a name="input_kms-alias"></a> [kms-alias](#input\_kms-alias) | n/a | `string` | `"alias/alarms"` | no |
 | <a name="input_kms_key"></a> [kms\_key](#input\_kms\_key) | n/a | `string` | `"alias/aws/sns"` | no |
 | <a name="input_log_group_name"></a> [log\_group\_name](#input\_log\_group\_name) | n/a | `string` | `"cloudtrail"` | no |
 | <a name="input_protocol"></a> [protocol](#input\_protocol) | n/a | `string` | `"sms"` | no |
