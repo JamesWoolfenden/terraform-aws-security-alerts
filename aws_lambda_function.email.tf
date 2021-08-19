@@ -6,11 +6,9 @@ resource "aws_lambda_function" "email" {
   role                           = aws_iam_role.lambda-messageprocessor.arn
   runtime                        = "python3.6"
   handler                        = "handler.lambda_handler"
-  filename                       = "${path.module}/lambda/lambda.zip"
-  source_code_hash               = filebase64sha256("${path.module}/lambda/lambda.zip")
+  filename                       = data.archive_file.notify.output_path
+  source_code_hash               = data.archive_file.notify.output_base64sha256
   reserved_concurrent_executions = var.concurrency
-
-  depends_on = [data.archive_file.notify]
   tracing_config {
     mode = "PassThrough"
   }
