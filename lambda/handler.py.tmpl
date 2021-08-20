@@ -8,6 +8,7 @@ def lambda_handler(event, context):
     myMessage= json.loads(event['Records'][0]['Sns']['Message'])
     AlarmName= myMessage["AlarmName"]
     Region   = myMessage["AlarmArn"].split(":")[3]
+    StateChangeTime=myMessage["StateChangeTime"]
 
     Link="https://{1}.console.aws.amazon.com/cloudwatch/home?region={1}#alarmsV2:alarm/{0}?~(alarmStateFilter~'ALARM)".format(AlarmName, Region)
 
@@ -15,7 +16,8 @@ def lambda_handler(event, context):
     payload=f"""
     Alarm raised by Cloudwatch:
     {Link}
-    {myMessage}"""
+
+    At {StateChangeTime}"""
 
     # Send
     resp = client.publish(TargetArn=sns_arn, Message=payload, Subject=mySubject)
