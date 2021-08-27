@@ -124,7 +124,7 @@ No requirements.
 | Name | Version |
 |------|---------|
 | <a name="provider_archive"></a> [archive](#provider\_archive) | n/a |
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 3.42.0 |
 
 ## Modules
 
@@ -196,11 +196,11 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_alarms"></a> [alarms](#output\_alarms) | n/a |
-| <a name="output_lambda"></a> [lambda](#output\_lambda) | n/a |
-| <a name="output_metrics"></a> [metrics](#output\_metrics) | n/a |
-| <a name="output_sns_topic_processed"></a> [sns\_topic\_processed](#output\_sns\_topic\_processed) | n/a |
-| <a name="output_sns_topic_subscription_lambda"></a> [sns\_topic\_subscription\_lambda](#output\_sns\_topic\_subscription\_lambda) | n/a |
+| <a name="output_alarms"></a> [alarms](#output\_alarms) | The alarms created |
+| <a name="output_lambda"></a> [lambda](#output\_lambda) | The lambda |
+| <a name="output_metrics"></a> [metrics](#output\_metrics) | The metrics filters for the Alarms |
+| <a name="output_sns_topic_processed"></a> [sns\_topic\_processed](#output\_sns\_topic\_processed) | The final SNS endpoint for a processed message |
+| <a name="output_sns_topic_subscription_lambda"></a> [sns\_topic\_subscription\_lambda](#output\_sns\_topic\_subscription\_lambda) | The SNS subcription that pulls messages into being processed by the Lambda |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Help

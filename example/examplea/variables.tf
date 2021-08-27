@@ -1,9 +1,13 @@
 
 variable "endpoint" {
-  default = "+4407976379686"
+  type        = string
+  description = "The endpoint that the protocol is using"
+  default     = "jwoolfenden@paloaltonetworks.com"
 }
 
 
 variable "protocol" {
-  default = "sms"
+  type        = string
+  description = "The protocol that SNS subscription uses"
+  default     = "email"
 }

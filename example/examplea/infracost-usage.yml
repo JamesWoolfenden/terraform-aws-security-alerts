@@ -1,8 +1,21 @@
 version: 0.1
 resource_usage:
+  module.alerts.aws_cloudwatch_log_group.processor:
+    monthly_data_ingested_gb: 0
+    monthly_data_scanned_gb: 0
+    storage_gb: 0
+  module.alerts.aws_lambda_function.email:
+    monthly_requests: 0
+    request_duration_ms: 0
+  module.alerts.aws_sns_topic.processed-message:
+    monthly_requests: 0
+    request_size_kb: 0
   module.alerts.aws_sns_topic.trail-unauthorised:
     monthly_requests: 0
     request_size_kb: 0
-  module.alerts.aws_sns_topic_subscription.sms:
+  module.alerts.aws_sns_topic_subscription.Emailfromlambda:
+    monthly_requests: 0
+    request_size_kb: 0
+  module.alerts.aws_sns_topic_subscription.lambda:
     monthly_requests: 0
     request_size_kb: 0
