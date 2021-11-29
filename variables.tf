@@ -17,3 +17,9 @@ variable "kms_key" {
   type    = string
   default = "alias/aws/sns"
 }
+
+
+variable "concurrency" {
+  type    = number
+  default = 1
+}

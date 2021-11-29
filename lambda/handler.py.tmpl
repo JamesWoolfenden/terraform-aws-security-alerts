@@ -1,0 +1,23 @@
+import boto3
+import json
+sns_arn = "${snstopic}"
+
+def lambda_handler(event, context):
+    client   = boto3.client("sns")
+    mySubject= (event['Records'][0]['Sns']['Subject']).strip("//")
+    myMessage= json.loads(event['Records'][0]['Sns']['Message'])
+    AlarmName= myMessage["AlarmName"]
+    Region   = myMessage["AlarmArn"].split(":")[3]
+    StateChangeTime=myMessage["StateChangeTime"]
+
+    Link="https://{1}.console.aws.amazon.com/cloudwatch/home?region={1}#alarmsV2:alarm/{0}?~(alarmStateFilter~'ALARM)".format(AlarmName, Region)
+
+    # Construct the message
+    payload=f"""
+    Alarm raised by Cloudwatch:
+    {Link}
+
+    At {StateChangeTime}"""
+
+    # Send
+    resp = client.publish(TargetArn=sns_arn, Message=payload, Subject=mySubject)

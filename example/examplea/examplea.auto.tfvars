@@ -1,1 +1,1 @@
-endpoint = "+0123456789"
+endpoint = "jwoolfenden@paloaltonetworks.com"

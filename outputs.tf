@@ -1,4 +1,5 @@
 output "metrics" {
+  description = "The metrics filters for the Alarms"
   value = [
     aws_cloudwatch_log_metric_filter.bucket_mod,
     aws_cloudwatch_log_metric_filter.cloudtrail_cfg,
@@ -18,6 +19,7 @@ output "metrics" {
 }
 
 output "alarms" {
+  description = "The alarms created"
   value = [
     aws_cloudwatch_metric_alarm.bucket_mod,
     aws_cloudwatch_metric_alarm.cloudtrail_cfg,
@@ -34,4 +36,20 @@ output "alarms" {
     aws_cloudwatch_metric_alarm.unauth,
     aws_cloudwatch_metric_alarm.vpc,
   ]
+}
+
+
+output "lambda" {
+  description = "The lambda"
+  value       = aws_lambda_function.email
+}
+
+output "sns_topic_processed" {
+  description = "The final SNS endpoint for a processed message"
+  value       = aws_sns_topic.processed-message
+}
+
+output "sns_topic_subscription_lambda" {
+  description = "The SNS subcription that pulls messages into being processed by the Lambda"
+  value       = aws_sns_topic_subscription.lambda
 }
