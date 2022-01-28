@@ -115,17 +115,16 @@ Project: .
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name                                                         | Version |
-| ------------------------------------------------------------ | ------- |
-| <a name="provider_archive"></a> [archive](#provider_archive) | n/a     |
-| <a name="provider_aws"></a> [aws](#provider_aws)             | n/a     |
+| Name | Version |
+|------|---------|
+| <a name="provider_archive"></a> [archive](#provider\_archive) | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
@@ -133,76 +132,75 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                                                        | Type        |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [aws_cloudwatch_log_group.processor](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group)                      | resource    |
-| [aws_cloudwatch_log_metric_filter.bucket_mod](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter)     | resource    |
-| [aws_cloudwatch_log_metric_filter.cloudtrail_cfg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource    |
-| [aws_cloudwatch_log_metric_filter.cmk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter)            | resource    |
-| [aws_cloudwatch_log_metric_filter.config_change](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter)  | resource    |
-| [aws_cloudwatch_log_metric_filter.gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter)        | resource    |
-| [aws_cloudwatch_log_metric_filter.nacl](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter)           | resource    |
-| [aws_cloudwatch_log_metric_filter.nomfa](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter)          | resource    |
-| [aws_cloudwatch_log_metric_filter.policychange](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter)   | resource    |
-| [aws_cloudwatch_log_metric_filter.root](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter)           | resource    |
-| [aws_cloudwatch_log_metric_filter.routes](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter)         | resource    |
-| [aws_cloudwatch_log_metric_filter.sg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter)             | resource    |
-| [aws_cloudwatch_log_metric_filter.signfail](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter)       | resource    |
-| [aws_cloudwatch_log_metric_filter.unauth](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter)         | resource    |
-| [aws_cloudwatch_log_metric_filter.vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter)            | resource    |
-| [aws_cloudwatch_metric_alarm.bucket_mod](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)               | resource    |
-| [aws_cloudwatch_metric_alarm.cloudtrail_cfg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)           | resource    |
-| [aws_cloudwatch_metric_alarm.cmk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)                      | resource    |
-| [aws_cloudwatch_metric_alarm.config_change](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)            | resource    |
-| [aws_cloudwatch_metric_alarm.gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)                  | resource    |
-| [aws_cloudwatch_metric_alarm.nacl](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)                     | resource    |
-| [aws_cloudwatch_metric_alarm.nomfa](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)                    | resource    |
-| [aws_cloudwatch_metric_alarm.policychange](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)             | resource    |
-| [aws_cloudwatch_metric_alarm.root](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)                     | resource    |
-| [aws_cloudwatch_metric_alarm.routes](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)                   | resource    |
-| [aws_cloudwatch_metric_alarm.sg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)                       | resource    |
-| [aws_cloudwatch_metric_alarm.signfail](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)                 | resource    |
-| [aws_cloudwatch_metric_alarm.unauth](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)                   | resource    |
-| [aws_cloudwatch_metric_alarm.vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm)                      | resource    |
-| [aws_iam_role.SNSFailureFeedback](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role)                                     | resource    |
-| [aws_iam_role.SNSSuccessFeedback](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role)                                     | resource    |
-| [aws_iam_role.lambda-messageprocessor](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role)                                | resource    |
-| [aws_iam_role_policy.failure](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy)                                  | resource    |
-| [aws_iam_role_policy.lambda](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy)                                   | resource    |
-| [aws_iam_role_policy.success](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy)                                  | resource    |
-| [aws_kms_alias.alarm](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_alias)                                                | resource    |
-| [aws_kms_key.alarm](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key)                                                    | resource    |
-| [aws_lambda_function.email](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function)                                    | resource    |
-| [aws_lambda_permission.with_sns](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_permission)                             | resource    |
-| [aws_sns_topic.processed-message](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic)                                    | resource    |
-| [aws_sns_topic.trail-unauthorised](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic)                                   | resource    |
-| [aws_sns_topic_subscription.Emailfromlambda](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic_subscription)            | resource    |
-| [aws_sns_topic_subscription.lambda](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic_subscription)                     | resource    |
-| [archive_file.notify](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file)                                              | data source |
-| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity)                               | data source |
+| Name | Type |
+|------|------|
+| [aws_cloudwatch_log_group.processor](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
+| [aws_cloudwatch_log_metric_filter.bucket_mod](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.cloudtrail_cfg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.cmk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.config_change](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.nacl](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.nomfa](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.policychange](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.root](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.routes](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.sg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.signfail](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.unauth](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_log_metric_filter.vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
+| [aws_cloudwatch_metric_alarm.bucket_mod](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.cloudtrail_cfg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.cmk](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.config_change](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.gateway](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.nacl](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.nomfa](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.policychange](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.root](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.routes](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.sg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.signfail](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.unauth](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_cloudwatch_metric_alarm.vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_iam_role.SNSFailureFeedback](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role.SNSSuccessFeedback](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role.lambda-messageprocessor](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy.failure](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
+| [aws_iam_role_policy.lambda](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
+| [aws_iam_role_policy.success](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) | resource |
+| [aws_kms_alias.alarm](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_alias) | resource |
+| [aws_kms_key.alarm](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) | resource |
+| [aws_lambda_function.email](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function) | resource |
+| [aws_lambda_permission.with_sns](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_permission) | resource |
+| [aws_sns_topic.processed-message](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic) | resource |
+| [aws_sns_topic.trail-unauthorised](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic) | resource |
+| [aws_sns_topic_subscription.Emailfromlambda](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic_subscription) | resource |
+| [aws_sns_topic_subscription.lambda](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic_subscription) | resource |
+| [archive_file.notify](https://registry.terraform.io/providers/hashicorp/archive/latest/docs/data-sources/file) | data source |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
 
 ## Inputs
 
-| Name                                                                        | Description | Type     | Default               | Required |
-| --------------------------------------------------------------------------- | ----------- | -------- | --------------------- | :------: |
-| <a name="input_concurrency"></a> [concurrency](#input_concurrency)          | n/a         | `number` | `1`                   |    no    |
-| <a name="input_endpoint"></a> [endpoint](#input_endpoint)                   | n/a         | `string` | n/a                   |   yes    |
-| <a name="input_function_name"></a> [function_name](#input_function_name)    | n/a         | `string` | `"message-processor"` |    no    |
-| <a name="input_kms-alias"></a> [kms-alias](#input_kms-alias)                | n/a         | `string` | `"alias/alarms"`      |    no    |
-| <a name="input_kms_key"></a> [kms_key](#input_kms_key)                      | n/a         | `string` | `"alias/aws/sns"`     |    no    |
-| <a name="input_log_group_name"></a> [log_group_name](#input_log_group_name) | n/a         | `string` | `"cloudtrail"`        |    no    |
-| <a name="input_protocol"></a> [protocol](#input_protocol)                   | n/a         | `string` | `"sms"`               |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_concurrency"></a> [concurrency](#input\_concurrency) | n/a | `number` | `1` | no |
+| <a name="input_endpoint"></a> [endpoint](#input\_endpoint) | n/a | `string` | n/a | yes |
+| <a name="input_function_name"></a> [function\_name](#input\_function\_name) | n/a | `string` | `"message-processor"` | no |
+| <a name="input_kms-alias"></a> [kms-alias](#input\_kms-alias) | n/a | `string` | `"alias/alarms"` | no |
+| <a name="input_kms_key"></a> [kms\_key](#input\_kms\_key) | n/a | `string` | `"alias/aws/sns"` | no |
+| <a name="input_log_group_name"></a> [log\_group\_name](#input\_log\_group\_name) | n/a | `string` | `"cloudtrail"` | no |
+| <a name="input_protocol"></a> [protocol](#input\_protocol) | n/a | `string` | `"sms"` | no |
 
 ## Outputs
 
-| Name                                                                                                                       | Description                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| <a name="output_alarms"></a> [alarms](#output_alarms)                                                                      | The alarms created                                                         |
-| <a name="output_lambda"></a> [lambda](#output_lambda)                                                                      | The lambda                                                                 |
-| <a name="output_metrics"></a> [metrics](#output_metrics)                                                                   | The metrics filters for the Alarms                                         |
-| <a name="output_sns_topic_processed"></a> [sns_topic_processed](#output_sns_topic_processed)                               | The final SNS endpoint for a processed message                             |
-| <a name="output_sns_topic_subscription_lambda"></a> [sns_topic_subscription_lambda](#output_sns_topic_subscription_lambda) | The SNS subcription that pulls messages into being processed by the Lambda |
-
+| Name | Description |
+|------|-------------|
+| <a name="output_alarms"></a> [alarms](#output\_alarms) | The alarms created |
+| <a name="output_lambda"></a> [lambda](#output\_lambda) | The lambda |
+| <a name="output_metrics"></a> [metrics](#output\_metrics) | The metrics filters for the Alarms |
+| <a name="output_sns_topic_processed"></a> [sns\_topic\_processed](#output\_sns\_topic\_processed) | The final SNS endpoint for a processed message |
+| <a name="output_sns_topic_subscription_lambda"></a> [sns\_topic\_subscription\_lambda](#output\_sns\_topic\_subscription\_lambda) | The SNS subcription that pulls messages into being processed by the Lambda |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Help
