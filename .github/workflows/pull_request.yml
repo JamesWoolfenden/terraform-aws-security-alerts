@@ -1,40 +1,12 @@
 ---
-# yamllint disable rule:line-length
 name: Pull Request
 on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
-  terraform:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          token: ${{ github.token }}
-          fetch-depth: '0'
-      - name: Terraform Init
-        uses: hashicorp/terraform-github-actions@master
-        with:
-          tf_actions_version: 1.0.1
-          tf_actions_subcommand: init
-          tf_actions_working_dir: example/examplea
-      - name: Terraform Validate
-        uses: hashicorp/terraform-github-actions@master
-        with:
-          tf_actions_version: 1.0.1
-          tf_actions_subcommand: validate
-          tf_actions_working_dir: example/examplea
-  security:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          token: ${{ github.token }}
-          fetch-depth: '0'
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
-      - uses: pre-commit/action@v2.0.0
+  pr:
+    uses: JamesWoolfenden/.github/.github/workflows/terraform-pr.yml@main

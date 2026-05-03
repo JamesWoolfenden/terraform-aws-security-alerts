@@ -1,0 +1,15 @@
+---
+name: Verify
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+  verify:
+    uses: JamesWoolfenden/.github/.github/workflows/terraform-verify.yml@main
