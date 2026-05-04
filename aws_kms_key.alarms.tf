@@ -1,5 +1,6 @@
 # you can't use a managed key to write to an encrypted SNS from a cloudwatch alarm
 resource "aws_kms_key" "alarm" {
+  # checkov:skip=CKV2_AWS_64: For example only, key policy managed via IAM
   policy              = <<POLICY
 {
     "Version": "2012-10-17",
