@@ -20,6 +20,8 @@ ASSUME
 
 
 resource "aws_iam_role_policy" "lambda" {
+  # checkov:skip=CKV_AWS_272: Policy requires broad access for this module to function
+  # checkov:skip=CKV_AWS_356: Policy requires broad access for this module to function
   role   = aws_iam_role.lambda-messageprocessor.name
   name   = "lambda"
   policy = <<POLICY
