@@ -223,13 +223,13 @@ resource "aws_iam_policy" "terraform_pike" {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
-                "SNS:CreateTopic",
-                "SNS:DeleteTopic",
-                "SNS:GetTopicAttributes",
-                "SNS:ListTagsForResource",
-                "SNS:SetTopicAttributes"
+                "SNS:GetSubscriptionAttributes",
+                "SNS:Subscribe",
+                "SNS:Unsubscribe"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor1",
@@ -240,15 +240,20 @@ resource "aws_iam_policy" "terraform_pike" {
                 "cloudwatch:ListTagsForResource",
                 "cloudwatch:PutMetricAlarm"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor2",
             "Effect": "Allow",
             "Action": [
-                "ec2:DescribeAccountAttributes"
+                "ec2:DescribeAccountAttributes",
+                "ec2:DescribeNetworkInterfaces"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor3",
@@ -265,7 +270,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "iam:PassRole",
                 "iam:PutRolePolicy"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor4",
@@ -281,9 +288,12 @@ resource "aws_iam_policy" "terraform_pike" {
                 "kms:ListAliases",
                 "kms:ListResourceTags",
                 "kms:PutKeyPolicy",
-                "kms:ScheduleKeyDeletion"
+                "kms:ScheduleKeyDeletion",
+                "kms:UpdateAlias"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor5",
@@ -298,7 +308,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "lambda:ListVersionsByFunction",
                 "lambda:RemovePermission"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor6",
@@ -310,11 +322,28 @@ resource "aws_iam_policy" "terraform_pike" {
                 "logs:DeleteRetentionPolicy",
                 "logs:DescribeLogGroups",
                 "logs:DescribeMetricFilters",
+                "logs:ListTagsForResource",
                 "logs:ListTagsLogGroup",
                 "logs:PutMetricFilter",
                 "logs:PutRetentionPolicy"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor7",
+            "Effect": "Allow",
+            "Action": [
+                "sns:CreateTopic",
+                "sns:DeleteTopic",
+                "sns:GetTopicAttributes",
+                "sns:ListTagsForResource",
+                "sns:SetTopicAttributes"
+            ],
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
