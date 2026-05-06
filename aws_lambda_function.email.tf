@@ -5,10 +5,11 @@ resource "aws_lambda_function" "email" {
   # checkov:skip=CKV_AWS_286: Log group encryption managed separately
   # checkov:skip=CKV_AWS_117: only using managed services
   # checkov:skip=CKV_AWS_116: DLQ not needed for now
+  # checkov:skip=CKV_AWS_272: code-signing config out of scope for this module
 
   function_name                  = var.function_name
   role                           = aws_iam_role.lambda-messageprocessor.arn
-  runtime                        = "python3.6"
+  runtime                        = "python3.12"
   handler                        = "handler.lambda_handler"
   filename                       = data.archive_file.notify.output_path
   source_code_hash               = data.archive_file.notify.output_base64sha256

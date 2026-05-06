@@ -1,13 +1,11 @@
 # terraform-aws-security-alerts
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-security-alerts/workflows/Verify%20and%20Bump/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-security-alerts)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-security-alerts/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-security-alerts)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-security-alerts.svg)](https://github.com/JamesWoolfenden/terraform-aws-security-alerts/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-security-alerts.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-security-alerts/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-security-alerts/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-security-alerts&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-security-alerts/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-security-alerts&benchmark=INFRASTRUCTURE+SECURITY)
 
 This module is to help implement compliance with the CIS benchmarks as tested in the Bridgecrew checks <https://docs.bridgecrew.io/docs/monitoring-policies>:
 
@@ -122,7 +120,7 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_archive"></a> [archive](#provider\_archive) | n/a |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
@@ -133,7 +131,7 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_cloudwatch_log_group.processor](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
 | [aws_cloudwatch_log_metric_filter.bucket_mod](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
 | [aws_cloudwatch_log_metric_filter.cloudtrail_cfg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_metric_filter) | resource |
@@ -183,7 +181,7 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_concurrency"></a> [concurrency](#input\_concurrency) | n/a | `number` | `1` | no |
 | <a name="input_endpoint"></a> [endpoint](#input\_endpoint) | n/a | `string` | n/a | yes |
 | <a name="input_function_name"></a> [function\_name](#input\_function\_name) | n/a | `string` | `"message-processor"` | no |
@@ -195,7 +193,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_alarms"></a> [alarms](#output\_alarms) | The alarms created |
 | <a name="output_lambda"></a> [lambda](#output\_lambda) | The lambda |
 | <a name="output_metrics"></a> [metrics](#output\_metrics) | The metrics filters for the Alarms |
