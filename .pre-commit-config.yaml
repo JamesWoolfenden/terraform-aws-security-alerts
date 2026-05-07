@@ -38,14 +38,14 @@ repos:
       - id: terraform-fmt
       - id: tf2docs
   - repo: https://github.com/bridgecrewio/checkov
-    rev: e52a901a3829d818d20c9b75e544845c8b756968 # 3.2.526
+    rev: e77b5f7422ad23034c1a3c0a1902cd7e9eb60caf # 3.2.527
     hooks:
       - id: checkov
         files: .
         verbose: true
         entry: checkov -d example/examplea --external-checks-dir checkov --download-external-modules true --compact
   - repo: https://github.com/jameswoolfenden/pike
-    rev: 4b5670a3254572b7853ebeb4c66718f2e6e09c51 # v0.4.3
+    rev: 26feee4bf690195c46456bce70ad8b292fac8a35 # v0.4.4
     hooks:
       - id: pike-docs-go
         args: ["readme", "-d", ".", "-i"]
@@ -54,7 +54,7 @@ repos:
     hooks:
       - id: actionlint
   - repo: https://github.com/jameswoolfenden/ghat
-    rev: a386050ae690ce55f567aaf177fa0516427f014a # v0.1.28
+    rev: e60f56cec93d64866fa82cf6511ce7c0cd92bb20 # v0.1.29
     hooks:
       - id: ghat-go
       - id: ghat-go-sift
